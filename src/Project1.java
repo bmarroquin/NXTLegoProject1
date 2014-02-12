@@ -5,8 +5,6 @@ import lejos.nxt.SensorPort;
 import lejos.nxt.TouchSensor;
 import lejos.nxt.UltrasonicSensor;
 import lejos.nxt.addon.AccelMindSensor;
-import lejos.nxt.LightSensor;
-import lejos.robotics.Color;
 
 public class Project1 {
 	TouchSensor frontBumber;
@@ -99,7 +97,7 @@ public class Project1 {
 	private void checkTilt() {
 		int dst []= new int[3];
 		tilt.getAllTilt(dst, 0);
-		if(dst[0]<-90 && dst[0]>-100){
+		if(dst[0]<-90 && dst[0]>-120){
 			backward(2000);
 			turn(1000, "left");
 			forward();
